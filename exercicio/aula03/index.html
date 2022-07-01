@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iniando estudos DOM </h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo o uso do <strong>Dom</strong></p>
+    <div class="msg">Clique em min</div>
+ 
+     <script>
+         var p1 =document.getElementsByTagName('p')[1]
+         document.write('está escrito assim: ' + p1.innerText)
+         var d = document.querySelector('div.msg')
+         d.style.background='blue'
+         d.style.color='white'
+         
+     </script> 
+</body>
+</html>

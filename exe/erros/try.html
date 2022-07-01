@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+</head>
+<body>
+    <script>
+        /*
+try{
+    console.log("OPA")
+}catch(ex){
+    console.log("Erro")
+}*/
+
+
+try{
+    num =prompt("Digite um valor")
+    if(num > 10){
+        throw new Error("valor invalido")
+    }
+    document.write("valor " + num + "<br>" )
+}catch(e){
+   num =alert("ERRO! O valor deve ser menor ou igual a 10")
+   num =prompt("Digite novamente")
+   document.write("valor " + num + "<br>")
+}finally{
+    document.write("FIM!")
+}
+    </script>
+</body>
+</html>

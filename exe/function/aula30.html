@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função</title>
+</head>
+<body>
+    <script>
+        var numeros =new Array(1,2,3,45,6,8,99,9);
+function media(nums){
+    var tam =nums.length;
+    var soma = 0;
+    for(var i=0;i<tam;i++){
+        soma+=nums[i];
+    }
+    return Math.round(soma/tam);
+}
+var res =media(numeros);
+document.write(res)
+    </script>
+</body>
+</html>

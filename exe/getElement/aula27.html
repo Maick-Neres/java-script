@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelectorAll</title>
+    <style>
+        label{
+            display: block;
+        }
+
+        input{
+            display: block;
+        }
+
+        input[type=button],label{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+   <form name="curso1" id="curso1" action="#" method="post">
+    <label for="Nome">Nome</label>
+    <input type="text" value="Primeiro" id="Teste">
+    <input type="text" value="Primeiro" id="Teste">
+    <input type="text" value="Primeiro" id="Teste">
+    <input type="text" value="Primeiro" id="Teste">
+    <input type="text" value="Primeiro" id="Teste">
+    <input type="text" value="Primeiro" id="Teste">
+    
+    <label for="Senha">Senha</label>
+    <input type="password" value="fsenha" id="123">
+    <input type="button" value="enviar">
+</form>
+
+
+ <form name="curso2" id="curso2" action="#" method="post">
+    <label for="Nome">Nome</label>
+    <input type="text" value="Segundo" id="Tp">
+    <label for="Senha">Senha</label>
+    <input type="password" value="fsenha" id="124">
+    <input type="button" value="enviar">
+</form>
+
+    
+    <hr>
+
+    <script>
+        //forms vai me retorna o formulario
+        //item também retorna para o formulário
+        //
+     
+        /*var f1 = document.forms[1].id; são iguais
+         var f1 = document.forms.item(0).id; são iguais 
+        namedItem IDEM 
+         E ultilazndo o innnerHTML para retorna o formulario*/
+
+
+         document.write(document.getElementById("curso1").elements[0].value)
+
+        var f1 = document.forms[0]
+        var el = f1.elements
+       for(var i =0;i<el.length-1;i++){
+            el[i].style.backgroundColor="#ddd"
+            el[i].value="maick"
+
+        }
+        
+       
+       // document.write(f1)
+
+
+    </script>
+    
+
+
+
+   </form>
+</body>
+</html>

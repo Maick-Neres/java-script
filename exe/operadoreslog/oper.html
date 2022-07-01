@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Logicos</title>
+</head>
+<body>
+    <h1>Operadores Logicos</h1>
+    <script>
+        /*
+        var pontos =40
+        var energia =6
+        if(pontos >= 30 && pontos <=40 && energia >=40 || pontos >= 70 && pontos <=80 && energia >=40){
+           //if(pontos >=40 || energia >=40){
+             document.write('Ganhou')
+            }else{
+                document.write('Perdeu')
+            }*/
+
+             // IF com multiplos retornos
+             
+             /*
+        var nota =7
+        if(nota >=7){
+            document.write('Aprovado')
+        }else if(nota >=4){
+            document.write('Recupeção')
+        }else{
+            document.write('Reprovado')
+        }*/
+
+        //outra opção
+        /*
+        var nota =5
+        if(nota >=7){
+        var res = 'ap'
+        }else if(nota >=4){
+            var res = 'recupeçao'
+        }else{
+            var res = 'repro'
+        }document.write(res)*/
+
+        var nota =8
+var res = 'Aprovado'
+if(nota >=7){
+    if(nota >9){
+     res += 'com nota louvor'
+      }else{
+         res += "nota normal"
+      }
+}else if (nota >=4){
+ var res = 'recuperação'
+}else{
+    var res ='reprovado'
+    if(nota >=2){
+     res += ' por nota baixa'
+    }else{
+     res += 'com louvor'
+    }
+}
+document.write(res)
+
+
+
+
+       
+    </script>
+</body>
+</html>

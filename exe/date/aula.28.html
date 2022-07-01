@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var dt =new Date()//
+    
+    var sem=dt.getDay()
+    var dia =dt.getDate()//chamar o dia
+    var ano = dt.getFullYear()
+    var mes =dt.getMonth()
+   
+    var hor = dt.getHours()
+    var min =dt.getMinutes()
+    var seg =dt.getSeconds()
+
+    var meses =["jan","fev","mar","abr","mai","jun","jul","ago","sen","out","nov","dez"]
+
+    var sema = ["dom","seg","ter","quar","qui","sex" ,"sab"] 
+
+    document.write(dia + "," + sema[sem] + " de " + meses[mes] + " de " + ano + "<br>" )
+    
+    document.write(hor + ":" + min + ":" + seg)
+ /*
+ get retorna o dia do mes 
+ set configura
+ */
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color: rgba(21, 145, 167, 0.804);
+            
+           
+        }
+        h1{
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+        
+        p{
+            font:normal 12pt arial;
+            color: rgb(0, 0, 0);
+        }
+
+        div#res{
+            font:normal 12pt arial;
+            margin-top: 10px;
+            color: rgb(0, 0, 0);
+           
+   
+        }
+        input.button:hover{
+            color: green;
+            
+        }
+        
+      
+
+
+    </style>
+</head>
+<body>
+    <h1><mark>Sistema de multas</mark> </h1> 
+
+   <p>Velocida do carro:<input class="ygt" type="number" name="txtvel" id="vel"> km\h
+   
+   <input class="button" type="button" value="verificar"onclick="calcular()">
+   <div id="res"></div>
+   <script>
+
+    function calcular(){
+
+       var txtv = document.querySelector('input#vel')
+       var res =document.querySelector('div#res')
+       var vel = Number(txtv.value)
+       res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h<strong></p>`
+        if(vel > 100){
+            res.innerHTML += `você está <strong>MULTADO</strong> por excesso de velocidade.
+            
+            <img src="https://www.brasildotrecho.com.br/wp-content/uploads/2022/02/Caminhoneiros-serao-os-mais-prejudicado-com-projeto-de-multa-pelo-valor-do-veiculo.jpg" alt="FOCK">
+
+
+         `
+        }
+        else{
+             res.innerHTML += `<p>Dirija sempre com o cinto de segurança!</p>
+             <img src="https://www.cursosdetransito.com.br/wp-content/uploads/2020/09/Respeiro_no_transito_22-09.jpg" alt="">
+             `
+        }
+       
+    }
+   </script>
+  
+</body>
+</html>
