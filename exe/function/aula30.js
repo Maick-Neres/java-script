@@ -5,15 +5,15 @@
 soma(1,3);*/
 
 /*
-function soma(n1,n2){
+function soma2(n1,n2){
     return n1+ n2;
 }
 console.log(soma(4,3));*/
 
 
-var numeros =new Array(1,2,3,45,6,8,99,9);
+var numeros =new Array(1,2,3);
 function media(nums){
-    var tam =nums.lenght;
+    var tam = nums.length;
     var soma = 0
     for(var i=0;i<tam;i++){
         soma+=nums[i];
@@ -23,8 +23,8 @@ function media(nums){
 console.log(media(numeros));
 
 /*
-var numeros =[1,2,3,4,5,6,7,8,9];
-function media(nums){
+var numero =[1,2,3,4,5,6,7,8,9];
+function media2(nums){
     var tam =numeros.length;
     soma = 0;
     for(i=0;i<tam;i++){

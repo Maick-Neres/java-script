@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+      h1{
+        text-align: center;
+      
+      }
+      div{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+      }
+      button{
+        margin:10px;
+      }
+    </style>
+</head>
+<body onload="ola()">
+    <h1>Eventos em JavaScript</h1>
+    <div id="div1" onmouseover="mudarcor(this,'blue')"
+    onmouseout="mudarcor(this,'white')"></div>
+    <button onmouseover="muda(this)">Clica aqui</button>
+    <script>
+        function mudarcor(obj,cor){
+            obj.style.backgroundColor=cor;
+        }
+
+        function muda (obj){
+            obj.style.position="absolute"
+            obj.style.left=Math.random()*500 + "px";
+            obj.style.top=Math.random()*500 + "px";
+
+
+        }
+
+        function ola(){
+            var data =new Date();
+            var hora = data.getHours();
+            var text="";
+            if(hora <12){
+                text="BOM DIA!";
+            } else if(hora <18){
+                text="BOA TARDE!";
+            }else{
+                text="BOA NOITE!";
+            }
+            alert("Olá, " + text);
+        }
+    </script>
+</body>
+</html>
