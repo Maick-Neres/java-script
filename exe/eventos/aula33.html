@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventlistener</title>
+    <script src=""></script>
+    <style>
+        #dv1{
+            width: 100px;
+            height: 100px;
+            background-color:#f00;
+            border: 1px solid #000;
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+    </style>
+    <script>
+        function msg (){
+            alert("Olá, mané");
+
+        }
+        function cor(obj,cor){
+           
+            obj.style.backgroundColor=cor;
+        }
+
+        /*
+        function cor1(){
+            var obj =document.getElementById("dv1")
+            obj.style.backgroundColor="#fff";
+        }
+
+        function cor2(){
+            var obj =document.getElementById("dv1")
+            obj.style.backgroundColor="#f00";
+        }*/
+
+        //TRABALHANDO COM PARÂMETRO
+        
+        function addEvent(){
+     var obj =document.getElementById("dv1")
+     obj.addEventListener("click",msg);
+     obj.addEventListener("mouseover",function(event){
+        cor(obj,"#fff")
+     })
+     obj.addEventListener("mouseout",function(envent){
+        cor(obj,"#f00")
+     })
+
+        }
+        window.addEventListener("load",addEvent);
+    
+        
+    </script>
+</head>
+<body>
+    <h1>addEventlistener</h1>
+   
+    <div id="dv1"></div>
+    
+</body>
+</html>
