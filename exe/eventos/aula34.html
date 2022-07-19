@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydowm</title>
+    <style>
+        div#dv1{
+            width: 100px;
+            border: 1px solid black;
+            height: 100px;
+            background-color:red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        div#dv2{
+            width: 100px;
+            border: 1px solid black;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dv1"></div>
+    <div id="dv2" onclick="move()"></div>
+    <script>
+        var px =0;
+        var py =0;
+        document.addEventListener("keydown",function(event){
+            var obj=document.getElementById("dv1");
+            var tecla= event.keyCode;
+            
+            //37-esquerda 38-cima 39-direita 40-baixo
+            if(tecla==37){
+                px-=15;
+                obj.style.left=px + "px";
+            }else if (tecla==38){
+                py-=15;
+                obj.style.top=py + "px";
+            }else if (tecla ==39){
+                px+=15;
+                obj.style.left=px + "px";
+            }else if (tecla ==40){
+                py+=15;
+                obj.style.top=py + "px";
+            }
+        });
+        var clic=document.getElementById("dv2",onclick);
+        var p1=0;
+        var p2=0;
+
+        function move(){
+            var obj2= document.getElementById("dv2");
+           var tl= event.keyCode;
+
+           if(tl==65){
+            p1+=100;
+            obj2.style.right=p1 + "px";
+           }else if(tl==87){
+            p2-=100;
+            obj2.style.top=p2 + "px";
+           }else if(tl==68){
+            p1-=100;
+            obj2.style.right=p1 + "px";
+           }else if(tl==83){
+            p2+=100;
+            obj2.style.top=p2 + "px";
+           }else if(tl==13){
+            alert("Evento Reomovido");
+            obj2.style.backgroundColor="white"
+          this.removeEventListener("keydown",move);
+           }else if(clic==clic){
+            alert("Evento Adicionado") 
+            obj2.style.backgroundColor="blue"
+      this.addEventListener("keydown",move);
+      
+           } 
+           
+           
+        }
+
+        document.addEventListener("keydown",move);
+    </script>
+</body>
+</html>
