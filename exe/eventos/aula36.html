@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydowm</title>
+    <style>
+        div#dv1 {
+            width: 100px;
+            border: 1px solid black;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dv1"></div>
+
+
+    <script>
+      
+         var obj = document.getElementById("dv1"); 
+        var px = 0;
+        var py = 0;
+        function move() {
+           
+            var tecla = event.keyCode;
+
+            if (tecla == 37) {
+                px -= 15;
+                obj.style.left = px + "px";
+            } else if (tecla == 38) {
+                py -= 15;
+                obj.style.top = py + "px";
+            } else if (tecla == 39) {
+                px += 15;
+                obj.style.left = px + "px";
+            } else if (tecla == 40) {
+                py += 15;
+                obj.style.top = py + "px";
+            } else if (tecla == 13) {
+                py += 15;
+                alert("Removido o envento keydown")
+                this.removeEventListener("keydown", move)
+                obj.style.backgroundColor="white";
+            }
+        }
+        
+        function inicio() {
+           obj.addEventListener("click",clique);
+          
+           
+        }
+
+        function clique(){
+            alert("Add o evento")
+ document.addEventListener("keydown",move);
+ obj.style.backgroundColor="blue";
+        }
+
+       window.addEventListener("load",inicio)
+       
+    </script>
+
+</body>
+
+</html>

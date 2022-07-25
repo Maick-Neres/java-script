@@ -33,6 +33,7 @@
     <script>
         var px =0;
         var py =0;
+        //event propriedade do código de passagem
         document.addEventListener("keydown",function(event){
             var obj=document.getElementById("dv1");
             var tecla= event.keyCode;
@@ -52,10 +53,13 @@
                 obj.style.top=py + "px";
             }
         });
+
+
+        /*
         var clic=document.getElementById("dv2",onclick);
         var p1=0;
         var p2=0;
-
+/*
         function move(){
             var obj2= document.getElementById("dv2");
            var tl= event.keyCode;
@@ -72,7 +76,8 @@
            }else if(tl==83){
             p2+=100;
             obj2.style.top=p2 + "px";
-           }else if(tl==13){
+           }
+           else if(tl==13){
             alert("Evento Reomovido");
             obj2.style.backgroundColor="white"
           this.removeEventListener("keydown",move);
@@ -87,6 +92,7 @@
         }
 
         document.addEventListener("keydown",move);
+        */
     </script>
 </body>
 </html>
