@@ -23,22 +23,40 @@
         var px;
         var py;
         var anima;
+        var mov;
+        var pont;
         function start(){
-            vel=0.1;
+            vel=2;
             dx=1;
             dy=0;
             px=0;
             py=0;
+            mov=1
+            pont=0;
             jog=document.getElementById("jogador");
-            jog.addEventListener("click",function(){
-                cancelAnimationFrame(anima);
-               
-                jog.addEventListener("click",function(){
-                    game()
-                })
-            })
+            jog.addEventListener("click",controle)
+            // jog.addEventListener("click",function(){
+            //     cancelAnimationFrame(anima);
+            // })
             game();
         }
+
+        function controle(){
+            if(mov){
+                mov=0;
+                jog.style.backgroundColor="red";
+                cancelAnimationFrame(anima);
+                vel =vel*2;
+                pont+=10
+                alert("Parabéns você fez " + pont + " pontos");
+            }else{
+                mov=1;
+                jog.style.backgroundColor="blue";
+                anima= requestAnimationFrame( game);
+            }
+          
+        }
+      
 
         function game(){
             px+=(dx*vel);
