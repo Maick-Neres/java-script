@@ -7,15 +7,38 @@
     <title>Detran</title>
     <style>
         body{
-            background-color: rgba(21, 145, 167, 0.804);
+            background-color: black;
+            background-image:url("placas.jpg!d") ;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: right center;
             
            
         }
-        h1{
-            text-align: center;
-            color: rgb(0, 0, 0);
+
+        main{
+            /* position: relative; */
+            width: 600px;
+            height: 97vh;
+            /* margin: auto; */
+            background-color:whitesmoke;
         }
-        
+
+        #sub-dv1{
+            /* display: block; */
+            /* position: absolute; */
+            background-color: rgb(228, 223, 223);
+            margin: auto ;
+            border: 1px solid black;
+            width: 500px;
+            height:98%;
+        }
+        .cab > h1{
+            width: 100%;
+            text-align: center;
+            border: 1px solid black;
+        }
+       
         p{
             font:normal 12pt arial;
             color: rgb(0, 0, 0);
@@ -39,12 +62,19 @@
     </style>
 </head>
 <body>
-    <h1><mark>Sistema de multas</mark> </h1> 
-
-   <p>Velocida do carro:<input class="ygt" type="number" name="txtvel" id="vel"> km\h
+<main>
+    <div id="sub-dv1">
+        <div class="cab">
+    <h1>Sistema de multas</h1> 
+        </div>
+        <label for="you">Velocida do carro:</label>
+   <input class="ygt" type="number" name="txtvel" id="vel"> km\h
    
    <input class="button" type="button" value="verificar"onclick="calcular()">
-   <div id="res"></div>
+
+   <!-- <div id="res"></div> -->
+</div>
+</main>
    <script>
 
     function calcular(){

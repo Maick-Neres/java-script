@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicinal</title>
+    <style>
+        table{
+              width: 400px;
+              border-collapse: collapse;
+        }
+        td,th{
+           
+            padding: 5px;
+            border: 1px solid black;
+        }
+        tr{
+            text-align: center;
+        }
+      
+    </style>
+</head>
+<body>
+    <table id="tbnotas">
+    <thead>
+        <tr>
+            <th>Alunos</th> <th>Notas</th> <th>Notas-2</th> <th>Resultado</th>
+        </tr>
+         
+    </thead>
+    <tbody>
+        <tr>
+            <td>A</td> <td >50</td> <td>0</td> <td id="n1"></td>
+        </tr> 
+        <tr>
+            <td>B</td> <td >55</td> <td >15</td> <td id="n2"></td>
+        </tr> 
+        
+        <tr>
+            <td >C</td> <td >10</td> <td >20</td> <td id="n3"></td>
+        </tr> 
+        <tr>
+            <td >D</td> <td>80</td> <td >10</td> <td id="n4"></td>
+        </tr>
+    </tbody>
+    <script>
+        var soma;
+        var tabela=document.getElementById("tbnotas");
+      for(var i=1;i<tabela.rows.length;i++){
+        soma=parseFloat(tabela.rows[i].cells[1].innerHTML)+parseFloat(tabela.rows[i].cells[2].innerHTML);
+        tabela.rows[i].cells[3].innerHTML=soma;
+      }
+
+        var n=[];
+        n[0]=document.getElementById("n1");
+        n[1]=document.getElementById("n2");
+        n[2]=document.getElementById("n3");
+        n[3]=document.getElementById("n4");
+        for(var i=0;i<4;i++){
+         if( n[i].innerHTML<70){
+            n[i].style.backgroundColor="#eeecec"
+            n[i].style.color="#f00"
+         }else{
+            n[i].style.color="#00f"
+         }
+        }
+     
+    </script>
+</table>
+</body>
+</html>

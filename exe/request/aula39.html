@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request</title>
     <style>
-        #jogador{
-            position:absolute ;
-            width:50px;
-            height:50px;
+        #jogador {
+            position: absolute;
+            width: 50px;
+            height: 50px;
             background-color: blue;
             left: 0;
             top: 0;
@@ -23,58 +24,78 @@
         var px;
         var py;
         var anima;
-        var mov;
+        var move;
         var pont;
-        function start(){
-            vel=2;
-            dx=1;
-            dy=0;
-            px=0;
-            py=0;
-            mov=1
-            pont=0;
-            jog=document.getElementById("jogador");
-            jog.addEventListener("click",controle)
+        function start() {
+            vel = 2;
+            dx = 1;
+            dy = 0;
+            px = 0;
+            py = 0;
+            move = 1
+            pont = 0;
+            jog = document.getElementById("jogador");
+            jog.addEventListener("click", controle)
+            document.getElementById("btin").addEventListener("click",mover);
+            document.getElementById("btpa").addEventListener("click",parar);
             // jog.addEventListener("click",function(){
             //     cancelAnimationFrame(anima);
             // })
             game();
         }
-
+//aula 40 function controle()
         function controle(){
-            if(mov){
-                mov=0;
-                jog.style.backgroundColor="red";
+            if (move) {
+                move = 0;
+                jog.style.backgroundColor = "red";
                 cancelAnimationFrame(anima);
-                vel =vel*2;
-                pont+=10
+                vel = vel * 2;
+                pont += 10
                 alert("Parabéns você fez " + pont + " pontos");
-            }else{
-                mov=1;
-                jog.style.backgroundColor="blue";
-                anima= requestAnimationFrame( game);
+            } else {
+                move = 1;
+                jog.style.backgroundColor = "blue";
+                anima = requestAnimationFrame(game);
             }
-          
         }
-      
+//aula 40 moverparar
+    //  function mover(){
+    //     if(!move){
+    //         move = 1;
+    //          jog.style.backgroundColor = "blue";
+    //         anima = requestAnimationFrame(game);
+    //     }
+           
+    // }
+    // function parar(){
+    //         move = 0;
+    //          jog.style.backgroundColor = "red";
+    //         cancelAnimationFrame(anima);
+    //     }
+           
+    
 
-        function game(){
-            px+=(dx*vel);
+        function game() {
+            px += dx * vel;
             // py+=dx*vel;
-            jog.style.left=px + "px";
+            jog.style.left = px + "px";
             // jog.style.top=py + "px";
-            if(px>900){
-                dx=-1;
-            }else if(px < 0){
-                dx=1;
+            if (px > 1078) {
+                dx = -1;
+            } else if (px== 0) {
+                dx = 1;
             }
-    anima= requestAnimationFrame( game);
+            anima = requestAnimationFrame(game);
         }
 
-        window.addEventListener("load",start);
+        window.addEventListener("load", start);
     </script>
 </head>
+
 <body>
     <div id="jogador"></div>
+    <input type="button" value="Iniciar" id="btin">
+    <input type="button" value="Parar" id="btpa">
 </body>
+
 </html>
