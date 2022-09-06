@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercíos</title>
+    <style>
+        body{
+            background-color: rgb(0, 183, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        main{
+            width: 500px;
+          
+            padding: 10px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px blak;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Verificador de idade </h1>
+    <main>
+        <div>
+            <p>Ano de Nascimento:
+            <input type="number" name="ano " id="txtano" min="0">
+        </p>
+            <p>Sexo:
+                <input type="radio" name="rasc" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="rasc" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p><input type="button" value="Verificar" id="btn"></p>
+        </div>
+        <div id="res">
+            <p>Preencha od dados acima para  ver o resultado</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

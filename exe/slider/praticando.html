@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+    <style>
+        #dv1{
+            width: 1100px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        var imgs=[];
+        var s =1;
+        var slider;
+        var indici;
+        var maxImg;
+        var tmp;
+        function precarregamento(){
+            for(i=0;i<3;i++){
+            imgs[i]=new Image();
+            imgs[i].src="imagems/s"+s+".jpg";
+            s++;
+            }
+         }
+         function carregamento(i){
+            slider.style.backgroundImage="url('"+imgs[i].src+"')"
+         }
+         function troca(){
+            indici++
+            if(indici>maxImg){
+                indici=0;
+            }
+            carregamento(indici)
+         }
+         function inicia(){
+            precarregamento()
+            indici=0
+            maxImg=imgs.length-1;
+            slider=document.getElementById("dv1");
+            carregamento(indici);
+            tmp=setInterval(troca,2000);
+         }
+         window.addEventListener("load",inicia)
+    </script>
+</head>
+<body>
+    <div id="dv1"></div>
+</body>
+</html>
