@@ -1,0 +1,17 @@
+// function callback(){
+//     let botao=document.getElementById("btn");
+//     botao.addEventListener("click",tabuada);
+// }
+// function tabuada(){
+//     let n1=document.getElementById("impu");
+//     let n2;
+//     let n3;
+// }
+
+// window.addEventListener("load",callback);
+var n =1
+while (c=0,c<=n) {
+    console.log(c);
+    c++
+}
+

@@ -13,7 +13,32 @@
             overflow: hidden;
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+        .btslider{
+            background-color: rgba(0, 0, 0,0.4);
+            height: 30%;
+            color: white;
+            outline: none;
+            border: none;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #load{
+            width: 100%;
+            height: 5px;
+            margin-top: 25%;
+            border: 1px solid rgba(255, 255, 255,0.3);
+        }
+        #barra{
+            width: 0%;
+            height: 100%;
+            background-color: white;
+            
+        }
+
     </style>
     <script>
         var imgs=[];
@@ -23,6 +48,8 @@
         var maxImg;
         var tmp;
         var tempo;
+        var vtbarra;
+        var vtempo;
         function precarregamento(){
             for(var i=0;i<3;i++){
             imgs[i]=new Image();
@@ -35,22 +62,38 @@
            
             slider.style.backgroundImage="url('"+imgs[i].src+"')"
         }
-        function troca(){
-            indiciatual++;
+        function troca(dir){
+            tempo=0
+            indiciatual+=dir;
             if(indiciatual>maxImg){
                 indiciatual=0
+            } if(indiciatual<0){
+                indiciatual=maxImg;
             }
             carregarimg(indiciatual); 
         }
 
         function inicia(){
             precarregamento();
+            vbarra=document.getElementById("barra")
             slider=document.getElementById("dvslider");
             indiciatual=0;
             maxImg=imgs.length-1;
             carregarimg(indiciatual); 
-            tempo=2000;
-            tmp=setInterval(troca,tempo);
+            tempo=0;
+            anima();
+            
+        }
+
+        function anima(){
+            tempo++
+            if(tempo>=500){
+                tempo=0;
+                troca(1);
+            }
+            vtempo=tempo/5;
+            vbarra.style.width=vtempo+"%"
+            window.requestAnimationFrame(anima);
         }
         window.addEventListener("load",inicia)
 
@@ -58,6 +101,12 @@
     </script>
 </head>
 <body>
-    <div id="dvslider"></div>
+    <div id="dvslider">
+    <button class="btslider" onclick="troca(-1)"><</button>
+    <div id="load">
+        <div id="barra"></div>
+    </div>
+    <button class="btslider" onclick="troca(1)">></button>
+</div>
 </body>
 </html>

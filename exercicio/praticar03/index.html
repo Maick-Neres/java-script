@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +7,64 @@
     <title>Exercíos</title>
     <style>
         body{
-            background-color: rgb(0, 183, 255);
+            background-image: url('pexels-min-an-853168.jpg');
+            background-size: cover;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            background-color:black;
             font-family: Arial, Helvetica, sans-serif;
+           
+           
         }
         h1{
+            font-size: 3em;
             text-align: center;
-            color: white;
+            color: black;
         }
         main{
+           
             width: 500px;
-          
             padding: 10px;
             margin: auto;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.623);
             border-radius: 10px;
-            box-shadow: 3px 3px 10px blak;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.582);
         }
+        p{
+            
+            font-weight: 700;
+            font-size: 1.3em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #masc,#fem{
+            margin-left: 50px;
+        }
+        #txtano{
+            border-radius: 10px;
+            padding: 2px;
+            width: 100px;
+            margin: 0 30px;
+        }
+        #btn{
+            outline: none;
+           
+            width: 100%;
+            padding: 5px;
+            color: rgba(255, 255, 255, 0.514);
+            background-color: rgba(255, 0, 0, 0.788);
+            border-radius: 10px;
+            font-weight:400;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.404);
+        }
+        #btn:hover{
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 0, 0);
+        }
+      
+
 
         
     </style>
@@ -32,18 +74,19 @@
     <main>
         <div>
             <p>Ano de Nascimento:
-            <input type="number" name="ano " id="txtano" min="0">
+            <input type="number" name="ano " id="txtano" min="0" placeholder="         2022" >
         </p>
+        <hr>
             <p>Sexo:
                 <input type="radio" name="rasc" id="masc" checked>
                 <label for="masc">Masculino</label>
                 <input type="radio" name="rasc" id="fem">
                 <label for="fem">Feminino</label>
             </p>
-            <p><input type="button" value="Verificar" id="btn"></p>
-        </div>
+            <p><input type="button" value="VERIFICAR" id="btn"></p>
+        </div><hr>
         <div id="res">
-            <p>Preencha od dados acima para  ver o resultado</p>
+            <p>Preencha os dados acima para  ver o resultado</p>
         </div>
     </main>
     <script src="script.js"></script>

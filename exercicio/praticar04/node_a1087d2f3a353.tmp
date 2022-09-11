@@ -1,0 +1,8 @@
+var x=20;
+var y=25;
+
+while(y<50){
+    
+    x+=25
+    console.log(x)
+}

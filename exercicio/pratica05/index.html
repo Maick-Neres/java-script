@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+    <script src="script.js"></script>
+    <style>
+        body{
+            background-color: #7159c1;
+            font-weight: bolder;
+        }
+
+        main{
+            max-width: 500px;
+            min-height: 300px;
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        main>p{
+            text-align: center;
+        }
+        h1,section{
+            text-align: center;
+        }
+        section{
+
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <main>
+        <p>DE:<input type="number" name="contador" id="contade"></p>
+        <p>Até:<input type="number" name="contador" id="contate"></p>
+        <p>Pular:<input type="number" name="contador" id="pulando"></p>
+        <p><button id="btn" onclick="contar()">Clik</button></p>
+        <section id="res">
+            Digite um número
+            
+        </section>
+    </main>
+   
+
+</body>
+</html>

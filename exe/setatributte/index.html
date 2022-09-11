@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setattribute</title>
+    <style>
+        #quadrado{
+          
+            width: 100px;
+            height: 100px;
+            margin: 10px 0;
+            border: 1px solid black;
+        }
+
+        .c1{
+            background-color: red;
+        }
+        .c2{
+            background-color: blue;
+        }
+        .c3{
+            background-color:green;
+        }
+
+    #new{
+        
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+
+    }
+    </style>
+    <script>
+        function mudaatributos(c){
+            var obj =document.getElementById("quadrado");
+            if(c==1){
+                obj.setAttribute("class","c1");
+            }else if(c==2){
+                obj.setAttribute("class","c2");
+            }else{
+                obj.setAttribute("class","c3");
+            }
+        }
+
+        function removeratributo(){
+            var obj =document.getElementById("quadrado");
+            obj.removeAttribute("class");
+        }
+
+        function cheking(){
+            var obj =document.getElementById("quadrado");
+            if(obj.hasAttribute("class")){
+                alert("Com atributos");
+            }else{
+                alert("Sem atributos");
+            }
+        }
+
+        // let num =14;
+        // res=!(num%2) ? "par" : "impar";
+        // alert(res)
+        // operadores ternário
+    </script>
+</head>
+<body>
+   <button onclick=" mudaatributos(1)">c1</button>
+   <button onclick=" mudaatributos(2)">c2</button>
+   <button onclick=" mudaatributos(3)">c3</button>
+   <button onclick="removeratributo()">remove</button>
+   <button onclick="name()">Verificar</button>
+    <div id="quadrado">
+    </div>
+</body>
+</html>
