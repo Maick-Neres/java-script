@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <style>
+      #squar{
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 300px;
+        height: 200px;
+        border-radius: 20%;
+       background-image: url("https://directimports.com.br/wp-content/uploads/2021/09/my17_civic_type_r_wallpaper_desktop_03-798x466.jpg");
+       overflow: hidden;
+        background-repeat: no-repeat;
+         background-size: cover;
+      }
+    </style>
+</head>
+<body>
+  <div id="squar"></div>
+
+  <script>
+    var obj;
+    var dx;
+    var px;
+    var tmp;
+    var vel;
+    var anima;
+    var anima2;
+    var ang;
+
+  
+    function loading() {
+      obj=document.getElementById("squar");
+      dx=1;
+      px=0;
+      vel=5;
+      anima2;
+      ang=0
+      // roteate();
+     game();
+    }
+  function game(){
+    px+=dx*vel
+    obj.style.left=px+"px"
+    if(px>900){
+      dx=-1
+      
+    }else if(px<0){
+      dx=1
+      
+    }
+   anima=requestAnimationFrame(game);
+
+  }
+
+  function roteate(){
+    obj.style.transform="rotate("+ang+"deg)";
+    ang++
+    if(ang>360 ){
+      ang=0
+    }
+    anima2=requestAnimationFrame(roteate);
+  }
+  loading()
+
+  
+  </script>
+</body>
+</html>

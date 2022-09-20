@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <main>
+        <input type="text" name="input" id="input" required>
+        <button onclick="palavras()">Verificar</button>
+				<p id="paragrafo"></p>
+    </main>
+</body>
+<script>
+
+// function palavras() {
+// 	var obj2=document.getElementById("paragrafo");
+// 	var obj=document.getElementById("input");
+// 	var nomes=[obj.value];
+	
+// 		if(nomes.includes("C")){
+// 			for(var i=0;i<nomes.length;i++){
+// 				var type=[nomes[i]];
+// 			}
+// 			document.write(obj2.innerText=type);
+// 		}else{
+// 			alert("[ERROR]")
+// 		}
+// }
+
+var tmp;
+var caixa=[];
+var corpo;
+function backg(){
+	corpo=document.getElementById("body");
+	
+		tmp=setInterval(mudacor,1000)
+}
+
+function  mudacor() {
+	var muda=Math.round(Math.random()*3);
+	caixa=['red', 'blue','green','black'];
+	
+		corpo.style.backgroundColor=""+caixa[muda];+""
+	
+	
+}
+window.addEventListener("load",backg)
+
+
+</script>
+</html>
